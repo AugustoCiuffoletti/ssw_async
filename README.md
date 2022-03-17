@@ -10,5 +10,3 @@ Poi il valore restituito dalle due promise viene inserito nel <div> di output. v
 Esperimenti consigliati:
 -) cancellare "await" e vedere cosa succede
 -) scambiare l'ordine dei due assegnamenti "await"
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/js-sswawait)
