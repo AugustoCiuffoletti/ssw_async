@@ -8,10 +8,8 @@ function sleep(ms, txt) {
   return new Promise(resolve => setTimeout(() => resolve(txt), ms));
 }
 async function prova() {
-  let step1 = sleep(3000, "Fine primo step <br>");
-  let step2 = sleep(5000, "Fine secondo step <br>");
-  outDiv.innerHTML += await step1;
-  outDiv.innerHTML += await step2;
+  outDiv.innerHTML += await sleep(3000, "Fine primo step <br>");
+  outDiv.innerHTML += await sleep(5000, "Fine secondo step <br>");
 }
 
 outDiv.innerHTML += "Inizio <br>";

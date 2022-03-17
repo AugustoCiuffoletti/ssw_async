@@ -1,7 +1,8 @@
 # Async e await
 
 L'esempio dimostra il funzionamento di async e await.
-La promise è di tipo un po' particolare, adatta all'esempio. Il metodo setTimeout chiama una funzione callback dopo un tempo definito in millisecondi. Nel nostro caso la funzione chiamata invoca il metodo resolve, con il valore testuale passato come parametro alla creazione della promise. In questo modo, allo scadere del timeout, il valore restituito dalla promise è il valore testuale stesso, mentre prima è una promessa non ancora risolta.
+
+Nella promise, il metodo setTimeout chiama una funzione callback dopo un tempo definito in millisecondi. Nel nostro caso la funzione chiamata invoca il metodo resolve con il valore testuale passato come parametro alla creazione della promise. In questo modo, allo scadere del timeout, il valore restituito dalla promise è il valore testuale stesso, mentre prima è una promessa non ancora risolta.
 
 Successivamente vengono definite due promise con due "let". L'esecuzione procede dopo ciascuna dichiarazione quindi le due promise partono alle stesso momento, e procedono in parallelo.
 
@@ -11,4 +12,3 @@ Esperimenti consigliati:
 -) cancellare "await" e vedere cosa succede
 -) scambiare l'ordine dei due assegnamenti "await"
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/js-sswawait)
