@@ -5,8 +5,8 @@ const outDiv = document.getElementById("output");
 appDiv.innerHTML = `<h1>Un esempio di <i>promise<i></h1>`;
 
 function sleep(ms, txt) {
-  return new Promise( resolve => {
-    setTimeout(() => resolve(txt), ms);
+  return new Promise( esce => {
+    setTimeout(() => esce(txt), ms);
   });
 }
 async function prova() {
