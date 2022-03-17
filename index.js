@@ -5,9 +5,7 @@ const outDiv = document.getElementById("output");
 appDiv.innerHTML = `<h1>Un esempio di <i>promise<i></h1>`;
 
 function sleep(ms, txt) {
-  return new Promise(resolve => {
-    setTimeout(() => resolve(txt), ms);
-  });
+  return new Promise(resolve => setTimeout(() => resolve(txt), ms));
 }
 async function prova() {
   let step1 = sleep(3000, "Fine primo step <br>");
@@ -17,4 +15,4 @@ async function prova() {
 }
 
 outDiv.innerHTML += "Inizio <br>";
-prova().then(() => (outDiv.innerHTML += "Finito"));
+prova().then(() => outDiv.innerHTML += "Finito");
