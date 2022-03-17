@@ -1,14 +1,5 @@
 # Async e await
 
-L'esempio dimostra il funzionamento di async e await.
+In questo branch le due promise vengono dichiarate nelle istruzioni "await". Ciascuna si risolve allo scadere del timeout, ma vengono eseguite sequenzialmente, perchè il timeout parte dalla diciarazione della promise. Quindi la prima visualizzazione appare dopo tre secondi, la seconda dopo ulteriori 5.
 
-Nella promise, il metodo setTimeout chiama una funzione callback dopo un tempo definito in millisecondi. Nel nostro caso la funzione chiamata invoca il metodo resolve con il valore testuale passato come parametro alla creazione della promise. In questo modo, allo scadere del timeout, il valore restituito dalla promise è il valore testuale stesso, mentre prima è una promessa non ancora risolta.
-
-Successivamente vengono definite due promise con due "let". L'esecuzione procede dopo ciascuna dichiarazione quindi le due promise partono alle stesso momento, e procedono in parallelo.
-
-Poi il valore restituito dalle due promise viene inserito nel <div> di output. viene specificato "await" perchè devo attendere la risoluzione della promise per ottenerene il dato. Se l'ordine delle due istruzioni è lo stesso delle dichiarazioni delle promesse, con il primo timeout (3 secondi) più breve del secondo (cinque secondi), otterrò la prima stampa dopo tre secondi, la seconda a due secondi dalla prima, cioè cinque secondi dalla dichiarazione della promise. Scambiando l'ordine dei due assegnamenti i due output sono simultanei, dopo 5 secondi: il primo attende cinque secondi, ed il secondo trova la promise già risolta, quindi non attende.
-
-Esperimenti consigliati:
--) cancellare "await" e vedere cosa succede
--) scambiare l'ordine dei due assegnamenti "await"
-
+Nella dichiarazione della promise ho cambiato l'identificatore "resolve" con un altro di fantasia "esce", per evidenziare che "resolve" non è una parola chiave ma solo un identificatore. Nell'uso è meglio preferire i termini convenzionali, quindi resolve e reject, per quanto non sia necessario.
